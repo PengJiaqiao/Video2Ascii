@@ -24,7 +24,7 @@ def main():
     # get command argument
     args = parser.parse_args()
 
-    outFile = 'output.txt'
+    outFile = 'output/output.txt'
     if args.outFile:
         outFile = args.outFile
 
