@@ -14,8 +14,8 @@ gscale = '@%#+=:. '
 class Image(object):
     def __init__(self, File, OutputPath, cols, scale):
         self.file_path = 'files/' + File
-        self.file_name, _ = str(FilePath).split('.')
-        self.save_path = os.path.join(OutputPath, path) + '.txt'
+        self.file_name, _ = str(File).split('.')
+        self.save_path = os.path.join(OutputPath, self.file_name) + '.txt'
         self.cols = int(cols)
         self.scale = float(scale)
 
