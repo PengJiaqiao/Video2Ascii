@@ -6,12 +6,18 @@ from Image import Image
 
 def main():
     # set command argument
-    parser = argparse.ArgumentParser(description = "Convertion between Video, Image and Ascii")
-    parser.add_argument('--file', dest = 'file', required = True, help = "Default path in Video2Ascii/files")
-    parser.add_argument('--mode', dest = 'mode', required = True, help = "Video2Image or Video2Ascii or Image2Ascii")
-    parser.add_argument('--output', dest = 'outFile', required = False, help = "Default path in Video2Ascii/output", default = 'output')
-    parser.add_argument('--cols', dest = 'cols', required = False, help = "Numbers of Ascii column", default = 200)
-    parser.add_argument('--scale', dest = 'scale', required = False, help = "Vertical scale factor", default = 0.5)
+    parser = argparse.ArgumentParser(description = "Convertion between Video,\
+     Image and Ascii")
+    parser.add_argument('--file', dest = 'file', required = True, help = \
+    "Default path in Video2Ascii/files")
+    parser.add_argument('--mode', dest = 'mode', required = True, help = \
+    "Video2Image or Video2Ascii or Image2Ascii")
+    parser.add_argument('--output', dest = 'outFile', required = False, help = \
+    "Default path in Video2Ascii/output", default = 'output')
+    parser.add_argument('--cols', dest = 'cols', required = False, help = \
+    "Numbers of Ascii column", default = 200)
+    parser.add_argument('--scale', dest = 'scale', required = False, help = \
+    "vertical scaling factor - higher leads a longer face", default = 0.5)
     # parser.add_argument('--morelevels', dest='moreLevels', action='store_true')#default:False(less levels)
 
     # get command argument
@@ -31,10 +37,3 @@ def main():
 
 if __name__ == '__main__':
     main()
-
-# command
-# required：--file test.mp4 or test.jpg (default path in Video2Ascii/files)
-#           --mode Video2Image or Video2Ascii or Image2Ascii
-# selective：--output video_name/video_split.jpg or output.txt (default path in Video2Ascii/output)
-#            --cols 100
-#            --scale 1 (vertical scaling factor)
